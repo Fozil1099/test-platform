@@ -1,8 +1,22 @@
-export type { Test, CreateTestDto, UpdateTestDto } from "./model/types";
+export type {
+  Test,
+  CreateTestDto,
+  TestTableResponse,
+  Question,
+  UpdateQuestionsDto,
+  TestResult,
+  TestResultResponse,
+  SubmitTestResultDto,
+} from "./model/types";
+export type { GetTestTableParams } from "./api";
 export {
-  getTests,
-  getTestById,
+  getTestTable,
   createTest,
-  updateTest,
-  deleteTest,
+  getQuestions,
+  getPublicQuestions,
+  getPublicQuestionsByName,
+  updateQuestions,
+  getTestResults,
+  checkTestResult,
+  downloadExcel,
 } from "./api";

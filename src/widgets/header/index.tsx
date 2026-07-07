@@ -3,7 +3,6 @@ import { useAuthStore } from "@/features/auth";
 import { Button } from "@/shared/ui";
 
 const navItems = [
-  { to: "/users", label: "Пользователи" },
   { to: "/tests", label: "Тесты" },
 ];
 

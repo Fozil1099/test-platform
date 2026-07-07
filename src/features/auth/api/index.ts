@@ -6,10 +6,11 @@ interface LoginRequest {
 }
 
 interface LoginResponse {
-  token: string;
+  access: string;
+  refresh: string;
 }
 
 export async function login(dto: LoginRequest): Promise<LoginResponse> {
-  const { data } = await api.post<LoginResponse>("/users/login", dto);
+  const { data } = await api.post<LoginResponse>("/staff/login/", dto);
   return data;
 }

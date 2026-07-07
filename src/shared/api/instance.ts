@@ -26,3 +26,10 @@ api.interceptors.response.use(
     return Promise.reject(error);
   },
 );
+
+export const publicApi = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});

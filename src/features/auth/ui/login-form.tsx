@@ -35,8 +35,8 @@ export function LoginForm() {
 
     setIsLoading(true);
     try {
-      const { token } = await login(result.data);
-      setToken(token);
+      const { access } = await login(result.data);
+      setToken(access);
       navigate("/");
     } catch {
       setServerError("Неверное имя пользователя или пароль");
